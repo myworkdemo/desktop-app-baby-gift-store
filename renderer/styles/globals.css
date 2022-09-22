@@ -1,0 +1,310 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --header-bg-color: #7f0eac;
+  --sidebar-bg-color: #5d0c7c;
+  --main-container-bg-color: #c46ae8;
+  --child-container-bg-color: #dd50ed;
+}
+
+.header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: var(--header-bg-color);
+  /* padding: 0 15px 0 15px; */
+  position: sticky;
+  top: 0;
+}
+
+.header-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: calc(100% / 3);
+}
+
+.app-name,
+.header-icons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.app-name {
+  width: 100%;
+  order: 1;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  /* background-color: #0fbd2c; */
+}
+
+.desktop-menu-icon {
+  display: none;
+}
+
+.header-icons {
+  width: 100%;
+  order: 3;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding-right: 10px;
+  cursor: pointer;
+  /* background-color: aqua; */
+}
+
+.header-icons i {
+  font-size: 22px;
+}
+
+.sidebar {
+  width: 12%;
+  height: 100%;
+  background-color: var(--sidebar-bg-color);
+  position: fixed;
+  left: 0;
+  overflow: hidden;
+  transition: 0.6s;
+}
+
+.sidebar-minimize {
+  width: 3rem;
+  transition: 0.6s;
+}
+
+.item-list {
+  /* border: 1px solid red; */
+}
+
+.main-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-left: 20px;
+  /* height: 100%;
+  max-height: 100%; */
+  cursor: pointer;
+  /* border-bottom: 1px solid red !important; */
+}
+
+.main-item .menu {
+  width: 12.2rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: var(--sidebar-bg-color);
+  padding: 0 5px 0 5px;
+  color: rgb(230, 49, 188);
+  font-size: 18px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* border-bottom: 1px solid red !important; */
+}
+
+.main-item .menu:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.item-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px 0;
+  padding-left: 10px;
+}
+
+.menu i {
+  /* font-size: 18px; */
+}
+
+.sub-item,
+.sub-item-close {
+  width: 12.2rem;
+  max-height: 25rem;
+  overflow: hidden;
+  display: block;
+  line-height: 20px;
+  background-color: #c46ae8;
+  border-radius: 2px;
+  transition: max-height 0.95s ease-in;
+}
+
+.sub-item-close {
+  max-height: 0;
+  margin-top: 0;
+  transition: max-height 0.99s ease-out;
+}
+
+.toggle-btn{
+ display:flex;
+ /* height: 100%; */
+ font-size: 18px;
+ transition: 0.6s;
+}
+
+ .toggle-down {
+  transform: rotate(180deg);
+}
+
+.toggle-up {
+  transform: rotate(360deg);
+}
+
+.sub-item .main-item .menu,
+.sub-item-close .main-item .menu{
+  /* border: none !important; */
+  background-color: #c46ae8;
+  color: aliceblue !important;
+  font-size: 16px !important;
+  width: 95% !important;
+  border-radius: 2px !important;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.sub-item .main-item .menu:hover{
+  /* transition: 0.2s; */
+  font-size: 18px !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.main-container {
+  width: 85%;
+  height: 100%;
+  min-height: 48rem;
+  margin-left: 15%;
+  background-color: var(--main-container-bg-color);
+  transition: 0.6s;
+  padding: 10px;
+  /* border-radius: 10px; */
+}
+
+.child-container {
+  width: 100%;
+  height: 100%;
+  min-height: 45rem;
+  background-color: var(--child-container-bg-color);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* --------------------------------------------------------------*/
+
+.main-card-container{
+  width: 100%;
+  height: 100%;
+  min-height: 42rem;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #c46ae8;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.main-card-title {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  border-radius: 5px;
+  background-color: var(--sidebar-bg-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.main-card-body{
+  width: 100%;
+  height: 100%;
+  min-height: 35rem;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid var(--sidebar-bg-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* background-color: yellow; */
+}
+
+@media (min-width: 48em) {
+  .admin-profile {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid red;
+  }
+
+  .admin-profile .admin-profile-img,
+  .admin-profile-img-minimize {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: 0.6s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .admin-profile-img {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .admin-profile-img-minimize {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .admin-name {
+    font-size: 18px;
+    color: #fff;
+    transition: 0.6s;
+  }
+
+  .admin-name-minimize {
+    font-size: 14px;
+    color: #fff;
+    transition: 0.6s;
+  }
+
+  .app-name {
+    width: 15%;
+  }
+
+  .desktop-menu-icon {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    order: 2;
+    padding: 0 10px 0 10px;
+    /* background-color: red; */
+  }
+
+  .header-icons {
+    width: 30%;
+  }
+
+  .desktop-menu-icon i {
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .header-icons .fa-bars {
+    display: none;
+  }
+
+  .sidebar {
+    width: 15%;
+  }
+
+  .sidebar-minimize {
+    width: 4%;
+  }
+}

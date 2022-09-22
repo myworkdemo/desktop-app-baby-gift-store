@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Product Stock",
+    "icon": "fa fa-user-circle",
+    "childrens": [
+      {
+        "title": "Add Stock",
+        "icon": "fa fa-regular fa-cart-arrow-down",
+        "path": "/stocks/add"
+      },
+      {
+        "title": "All Records",
+        "icon": "fa fa-regular fa-list",
+        "path": "/all-sale-products"
+      },
+      {
+        "title": "FAQ",
+        "icon": "fa fa-home-alt"
+      }
+    ]
+  },
+  {
+    "title": "Account",
+    "icon": "fa fa-user-circle",
+    "childrens": [
+      {
+        "title": "Login",
+        "path": "/login"
+      },
+      {
+        "title": "Register",
+        "path": "/register"
+      },
+      {
+        "title": "Forgot Password",
+        "path": "/forgot-password"
+      },
+      {
+        "title": "Reset Password",
+        "path": "/reset-password"
+      }
+    ]
+  },
+  {
+    "title": "Master",
+    "icon": "fa fa-user-circle",
+    "path": "/masters/addMaster"
+  }
+]

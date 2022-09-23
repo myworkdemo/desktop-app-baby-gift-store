@@ -1,6 +1,6 @@
-appId: com.example.nextron
-productName: My Nextron App
-copyright: Copyright © 2018 Yoshihide Shiono
+appId: com.babygiftstore
+productName: Baby Gift Store
+copyright: Copyright © 2022 IntellectSpark Technologies
 directories:
   output: dist
   buildResources: resources
@@ -9,4 +9,7 @@ files:
     filter:
       - package.json
       - app
-publish: null
+publish:
+  provider: github
+  ower: myworkdemo
+  repo: desktop-app-baby-gift-store
